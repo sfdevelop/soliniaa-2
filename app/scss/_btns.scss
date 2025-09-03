@@ -1,0 +1,37 @@
+.btn {
+	padding: 20px 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	cursor: pointer;
+	outline: none;
+	border-radius: 50px;
+	background: #1B756B;
+	color: #fff;
+	font-family: "Plus Jakarta Sans", sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 20px;
+	width: fit-content;
+	transition: linear .2s;
+
+	img {
+		margin: 0 0 0 20px;
+	}
+
+	&:hover {
+		background-color: #D20032;
+	}
+
+	&--twoo {
+		padding: 6px 6px 6px 15px;
+
+		img {
+			width: 44px;
+			height: 44px;
+			display: block;
+			margin: 0 0 0 20px;
+		}
+	}
+}

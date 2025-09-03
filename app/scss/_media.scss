@@ -1,0 +1,455 @@
+@media (max-width: 1200px) {}
+
+
+@media (max-width: 991px) {
+	.header__inner {
+		height: 50px;
+		padding: 10px 0;
+	}
+
+	.dark-bg .header {
+		background-color: #EEF7EC;
+	}
+
+	.header__box {
+		max-width: 100%;
+		margin: 0;
+		position: fixed;
+		top: 50px;
+		right: 0;
+		left: 0;
+		width: 100%;
+		height: 380px;
+		z-index: 999;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		overflow: hidden;
+		background-color: #EEF7EC;
+		transition: linear .4s;
+		transform: translateX(100%);
+		opacity: 0;
+	}
+
+	.header__box.open {
+		transform: translateY(0);
+		opacity: 1;
+	}
+
+	.header__menu-btn {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0;
+		position: relative;
+		width: 29px;
+		height: 16px;
+		background-color: transparent;
+		border: none;
+
+		span {
+			width: 100%;
+			height: 1px;
+			background-color: #000101;
+			transition: linear .2s;
+		}
+
+		&::after,
+		&::before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 1px;
+			background-color: #000101;
+			transition: linear .2s;
+		}
+
+		&::after {
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		&::before {
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+
+	.header__menu-btn.active {
+		span {
+			opacity: 0;
+		}
+
+		&::after {
+			top: 50%;
+			transform: translate(-50%, -50%) rotate(45deg);
+		}
+
+		&::before {
+			bottom: auto;
+			top: 50%;
+			transform: translate(-50%, -50%) rotate(-45deg);
+		}
+	}
+
+	.header__box-inner {
+		padding: 65px 15px 70px !important;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+
+		nav {
+			width: 100%;
+			margin: 0 0 25px 0;
+
+			ul {
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+			}
+
+			li {
+				width: 100%;
+				margin: 0 0 20px 0;
+			}
+
+			a {
+				display: flex;
+				font-size: 16px;
+				font-weight: 500;
+				line-height: 20px;
+				padding: 5px 0;
+				width: 100%;
+				border-bottom: 1px solid rgba(187, 219, 201, 1);
+			}
+		}
+	}
+
+	.header__box-top {
+		height: 65px;
+		padding: 10px 15px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+	}
+
+	.intro__title {
+		font-size: 46px;
+	}
+
+	.exellence__inner {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.exellence__item:nth-child(even) {
+		margin-top: 0;
+	}
+
+	.exellence__right {
+		max-width: 100%;
+	}
+
+	.exellence__left {
+		max-width: 100%;
+		margin: 0 0 25px 0;
+
+		.btn {
+			display: none;
+		}
+	}
+
+	.exellence__inner>.btn {
+		display: flex;
+	}
+
+	.exellence {
+		padding: 65px 0;
+	}
+
+	.faq__inner {
+		flex-direction: column;
+	}
+
+	.faq__left {
+		max-width: 100%;
+		margin: 0 0 20px 0;
+	}
+
+	.faq__text {
+		max-width: 100%;
+	}
+
+	.accordeon {
+		margin: 0;
+	}
+
+	.offer__item {
+		width: calc(33.33333% - 25px);
+	}
+
+	.offer .title {
+		font-size: 42px;
+	}
+
+
+
+}
+
+
+@media (max-width: 767px) {
+	body {
+		font-size: 12px;
+	}
+
+	.footer__inner {
+		flex-wrap: wrap;
+	}
+
+	.footer nav {
+		width: 100%;
+
+		ul {
+			display: flex;
+			flex-wrap: wrap;
+			margin: 0 0 0 -15px;
+		}
+
+		li {
+			width: calc(50% - 15px);
+			margin: 0 0 10px 15px;
+		}
+	}
+
+	.footer__links {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		margin: 20px 0 0 -15px;
+
+		li {
+			width: calc(50% - 15px);
+			margin: 0 0 10px 15px !important;
+		}
+	}
+
+	.footer__logo {
+		margin: 0 0 25px 0;
+	}
+
+	.footer a {
+		font-size: 12px;
+		width: 90px;
+	}
+
+	.footer__inner {
+		padding: 45px 0;
+	}
+
+	.footer__bot {
+		font-size: 11px;
+		padding: 10px 0;
+	}
+
+	.intro__inner {
+		padding: 90px 0 80px;
+		flex-direction: column-reverse;
+	}
+
+	.intro__title {
+		font-size: 36px;
+	}
+
+	.header__logo {
+		width: 90px;
+	}
+
+	.intro__right {
+		width: 90%;
+	}
+
+	.intro__left {
+		padding: 25px 0 0 0;
+		margin: 0;
+	}
+
+	.intro__text {
+		font-size: 14px;
+		margin: 0 0 35px 0;
+	}
+
+	.intro .btn {
+		padding: 20px 25px;
+		margin: 0 auto;
+	}
+
+	.title {
+		font-size: 28px;
+	}
+
+	.exellence__text {
+		margin: 0;
+	}
+
+	.btn {
+		padding: 17px 24px;
+		font-size: 14px;
+	}
+
+	.steps__item {
+		width: calc(100% - 25px);
+		margin-bottom: 30px;
+	}
+
+	.steps {
+		padding: 70px 0 40px;
+	}
+
+	.steps .title,
+	.steps__info {
+		text-align: left;
+	}
+
+	.steps__num {
+		width: 60px;
+		height: 60px;
+		font-weight: 600;
+		font-size: 26px;
+		margin: 0 0 20px 0;
+	}
+
+	.steps__info {
+		margin: 0 auto 25px;
+	}
+
+	.steps__inner {
+		padding: 15px;
+	}
+
+	.steps__title {
+		font-size: 18px;
+	}
+
+	.steps__inner img {
+		margin: 0 auto 24px;
+	}
+
+	.faq {
+		padding: 70px 0 55px;
+	}
+
+	.accordeon dt {
+		font-size: 18px !important;
+		padding-right: 30px;
+	}
+
+	.accordeon dl {
+		padding: 12px;
+	}
+
+	.accordeon dd {
+		font-size: 12px;
+	}
+
+	.page__inner {
+		padding: 24px;
+	}
+
+	.page__step-num {
+		margin: 0 0 15px 0;
+		width: 80px;
+		height: 80px;
+	}
+
+	.page {
+		padding: 20px 0 100px;
+
+		.title-twoo {
+			width: calc(100% + 30px);
+			margin: 0 0 85px -15px;
+		}
+	}
+
+	.title-twoo {
+		font-size: 20px;
+	}
+
+	.irs--flat .irs-min,
+	.irs--flat .irs-max {
+		font-size: 16px;
+		font-weight: 700;
+	}
+
+	.page__md .btn {
+		margin: 0 auto 0;
+	}
+
+	.page__md {
+		margin: 55px 0 0 0;
+		flex-direction: column-reverse;
+		align-items: center;
+	}
+
+	.page__nav {
+		width: 70%;
+	}
+
+	.page__back {
+		margin: 20px 0 0 0;
+		font-size: 16px;
+	}
+
+	.form-group {
+		width: calc(100% - 25px) !important;
+	}
+
+	.offer__item {
+		width: calc(50% - 25px);
+	}
+
+	.offer .title {
+		font-size: 30px;
+		margin: 0 0 35px 0;
+	}
+
+	.offer__title {
+		font-size: 12px;
+	}
+
+	.offer__line span {
+		font-size: 12px;
+	}
+
+	.offer__line p {
+		font-size: 14px;
+	}
+
+	.offer__item .btn {
+		margin: 30px 0 0 0;
+	}
+
+	.offer__item {
+		margin-bottom: 45px;
+	}
+}
+
+@media (max-width: 576px) {
+	.exellence__right {
+		margin: 0;
+	}
+
+	.exellence__item {
+		padding: 15px;
+		margin: 0 0 25px 0;
+		width: 100%;
+	}
+
+	.offer__item {
+		width: calc(100% - 25px);
+	}
+}
