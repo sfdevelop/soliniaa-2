@@ -16,6 +16,7 @@
 	background-color: #fff;
 	transition: linear .2s;
 	border-bottom: 1px solid rgba(187, 219, 201, 1);
+	background-color: transparent;
 
 	&__inner {
 		height: 69px;
@@ -90,6 +91,10 @@
 	}
 }
 
+.header.sticky{
+	background-color: #fff;
+}
+
 .intro {
 	background: var(--2222, linear-gradient(5.36deg, rgba(254, 250.93333435058594, 231, 0.5) 45%, rgba(190, 228, 205, 0.5) 100%));
 
@@ -138,6 +143,7 @@
 		margin: 0 0 50px 0;
 		font-size: 16px;
 		font-weight: 400;
+		line-height: 130%;
 		max-width: 550px;
 		color: #0C120C;
 	}
@@ -221,6 +227,7 @@
 		padding: 30px;
 		margin: 0 0 25px 35px;
 		width: calc(50% - 35px);
+		height: fit-content;
 
 		li {
 			position: relative;
@@ -248,7 +255,11 @@
 	}
 
 	&__item:nth-child(even) {
-		margin-top: 55px;
+		margin-top: 45px;
+	}
+
+	&__item:nth-child(3) {
+		margin-top: -30px;
 	}
 
 	&__item:first-child {
@@ -314,7 +325,8 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		background: radial-gradient(circle, #DCFFEA 0%, #1B756B 90%);
+		background: radial-gradient(circle at top left, #DCFFEA 0%, #1B756B 90%);
+
 		width: 70px;
 		height: 70px;
 		border-radius: 50%;
@@ -426,7 +438,7 @@
 	dt {
 		position: relative;
 		color: rgba(12, 18, 12, 1);
-		font-size: 16px;
+		font-size: 18px;
 		line-height: 120%;
 		font-weight: 600;
 		text-align: left;
@@ -452,8 +464,6 @@
 	}
 
 	dt.active {
-		font-size: 18px;
-
 		&::before {
 			opacity: 0;
 		}

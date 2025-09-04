@@ -6,6 +6,9 @@ $(function () {
 		$(this).parent().toggleClass("open");
 	});
 
+	$(".accordeon dd:first").show().prev().addClass("active").parent().addClass("open");
+
+
 	$("#example_id").ionRangeSlider({
 		min: 500,
 		max: 10000,
@@ -14,6 +17,15 @@ $(function () {
 	});
 });
 
+window.addEventListener("scroll", function () {
+	const header = document.querySelector("header");
+
+	if (window.scrollY > 0) {
+		header.classList.add("sticky");
+	} else {
+		header.classList.remove("sticky");
+	}
+});
 
 document.addEventListener("DOMContentLoaded", () => {
 	const menuBtn = document.querySelector(".header__menu-btn");
@@ -24,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	menuBtn.addEventListener("click", () => {
 		box.classList.toggle("open");
 		body.classList.toggle("dark-bg");
-		menuBtn.classList.toggle("active"); 
+		menuBtn.classList.toggle("active");
 	});
 
 	links.forEach(link => {
